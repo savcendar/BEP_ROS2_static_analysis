@@ -69,7 +69,7 @@ def main():
     plt.figure(figsize=(14, plt_height))
     plt.barh(df['Dependency'], df['Count'], color='#87CEEB', edgecolor='black')
     plt.xlabel('Total occurence')
-    plt.title(f'Mutual dependencies across Franka, UR, and MoveIt2 projects')
+    plt.title(f'Mutual dependencies across ' + ', '.join(os.listdir(repos_path)))
     plt.gca().invert_yaxis()
     plt.grid(axis='x', linestyle='--', alpha=0.5)
     for i, v in enumerate(df['Count']):
